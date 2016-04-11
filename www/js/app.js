@@ -4,17 +4,17 @@ app.config(function($routeProvider) {
     $routeProvider
 
     .when('/login', {
-        templateUrl: 'templates/www/login/login.html',
+        templateUrl: 'www/templates/login/login.html',
         controller: 'loginCtrl'
     })
     
     .when('/forgotpassword', {
-        templateUrl: 'templates/www/forgotpassword/forgotpassword.html',
+        templateUrl: 'www/templates/forgotpassword/forgotpassword.html',
         controller: 'forgotpasswordCtrl'
     })
     
     .when('/signup', {
-        templateUrl: 'templates/www/signup/signup.html',
+        templateUrl: 'www/templates/signup/signup.html',
         controller: 'signupCtrl'
     })
     
@@ -32,4 +32,8 @@ app.controller('loginCtrl', function($scope) {
 
 app.controller('forgotpasswordCtrl', function($scope) {
   $scope.message = 'Hello from the other side';
+});
+
+app.controller('signupCtrl', function($scope) {
+  $scope.message = 'Hello from the signup side';
 });
