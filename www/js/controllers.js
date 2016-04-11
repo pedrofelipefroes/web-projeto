@@ -18,7 +18,25 @@ app.controller('signupCtrl', ['$scope', function($scope) {
 app.controller('homeCtrl', ['$scope', 'userService', function($scope, userService) {
     $scope.user = userService.getUser;
     
-    $scope.message = 'Hello from the home side';
+    var imagem = document.getElementById('slide');
+    var intervaloSlide = setInterval(slideShow, 3000);
+    var servidorDasImagens = 'img/slideshow/';
+    var todasAsImagens = ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg', 'img6.jpg'];
+    
+    function slideShow() {
+        for (var i = 0; i < todasAsImagens.length; i++) {
+            if (imagem.src.indexOf(todasAsImagens[i]) != -1) {
+                if (i != todasAsImagens.length-1)
+                    imagem.src = servidorDasImagens+todasAsImagens[i+1];
+                else
+                    imagem.src = servidorDasImagens+todasAsImagens[0];
+                break;
+            }
+        }
+    }
+    
+    $scope.news = 'Notícias';
+    $scope.patchnews = 'Patch-fixes';
 }]);
 
 app.controller('mychampionshipsCtrl', ['$scope', function($scope) {

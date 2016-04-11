@@ -175,6 +175,24 @@
     height: 90%;
 }
 
+#slideshow {
+    height: 25em;
+    margin: 1% 0;
+    position: relative;
+    
+    text-align: center;
+}
+
+#slide {
+    height: 100%;
+    width: 60%;
+    
+    border-radius: 15px;
+    box-shadow: -5px 5px 40px 5px rgba(0,0,0,0.9);
+    -webkit-box-shadow: -5px 5px 40px 5px rgba(0,0,0,0.9);
+    -moz-box-shadow: -5px 5px 40px 5px rgba(0,0,0,0.9);
+}
+
 /* TAGS & DERIVATED CLASSES */
 
 a {
