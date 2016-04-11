@@ -1,0 +1,51 @@
+<!doctype html>
+<html ng-app="playstadiumApp">
+    <head>
+        <!-- AngularJS & AngularJS Route -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+        <script src="js/app.js"></script>
+
+        <!-- Stylesheet & fonts -->
+        <link href="css/stylesheet.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Yantramanav:300,400,500&subset=latin,latin-ext'
+              rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    
+    <body>
+        <script type="text/ng-template" id="templates/www/login/login.html">
+           
+            <div class="flex-center-column-container">
+                <img src="img/logo/logo.svg" id="logo" alt="Welcome to Play Stadium">
+                
+                <section id="sign-in-container">
+                    <header class="horizontal-inline-center">
+                        welcome to your<br>e-championship manager for<br>
+                        
+                        <div class="flex-center-row-container">
+                            <img src="img/logo/leagueoflegends-logo.png" id="game-logo"
+                                 alt="League of Legends">
+                            <img src="img/logo/pokemonshowdown-logo.png" id="game-logo"
+                                 alt="Pokémon Showdown">
+                        </div>
+                    </header>
+                    
+                    <form name="loginForm">
+                        <input type="text" name="username" placeholder="username" 
+                               ng-minlength="3" ng-model="user.username" required>
+                        <input type="password" name="password" placeholder="password" 
+                               ng-minlength="3" ng-model="user.password" required>
+                        <button class="button-clear">Forgot your password?</button>
+                    </form>
+
+                    <button class="button-block" type="submit" ng-disabled="loginForm.$invalid">Sign-me in!</button>
+                    
+                    <button class="button-clear">Or click here to sign up</button>
+                </section>
+            </div>
+        </script>
+        
+        <div ng-view></div>
+    </body>
+</html>
