@@ -151,6 +151,59 @@
 
 /* IDs */
 
+#card-hidden {
+    position: fixed;
+    width: 200px;
+    top: 100px;
+    left: -174px;
+    
+    background-color: #0c60ee;
+    border-radius: 10px;
+    color: ghostwhite;
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 400;
+    opacity: 0.9;
+    padding: 5px;
+    text-align: center;
+    
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+#card-hidden:hover {
+    transform: translateX(174px);
+    -webkit-transform: translateX(174px);
+}
+
+#card-image {
+    width: 80%;
+    
+    float: left;
+    padding: 2px;
+    
+    transition: all 0.05s ease-in-out;
+    -webkit-transition: all 0.05s ease-in-out;
+}
+
+#card-hidden:hover > #card-image-right {
+    -webkit-animation: spin 0.8s infinite linear;
+    animation: spin 0.8s infinite linear;
+}
+
+@-webkit-keyframes spin {
+    0%  {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}   
+}
+
+#card-image-right {
+    width: 15%;
+    position: absolute;
+    top: 19px;
+    right: 3px;
+    
+    float: right;
+}
+
 #input-box {
     display: block;
     margin: 0 auto;
@@ -191,6 +244,10 @@
     box-shadow: -5px 5px 40px 5px rgba(0,0,0,0.9);
     -webkit-box-shadow: -5px 5px 40px 5px rgba(0,0,0,0.9);
     -moz-box-shadow: -5px 5px 40px 5px rgba(0,0,0,0.9);
+    
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 /* TAGS & DERIVATED CLASSES */
