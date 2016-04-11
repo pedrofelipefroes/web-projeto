@@ -43,8 +43,10 @@
                         <a href="#/forgotpassword">Forgot your password?</a>
                     </button>
 
-                    <button href="#/home" class="button-block" type="submit" 
-                            ng-disabled="loginForm.$invalid">Sign-me in!</button>
+                    <button class="button-block" type="submit" 
+                            ng-disabled="loginForm.$invalid">
+                        <a href="#/home">Sign-me in!</a>
+                    </button>
                     
                     <button class="button-clear">
                         <a href="#/signup">Or click here<br>to sign up</a>
@@ -87,8 +89,10 @@
                                ng-minlength="3" ng-model="user.passwordconf" required>
                     </form>
 
-                    <button href="#/home" class="button-block" type="submit" 
-                            ng-disabled="signupForm.$invalid">Sign-me in!</button>
+                    <button class="button-block" type="submit" 
+                            ng-disabled="signupForm.$invalid">
+                        <a href="#/home">Sign-me up!</a>
+                    </button>
                     
                     <button class="button-clear">
                         <a href="#/login">Back to login</a>

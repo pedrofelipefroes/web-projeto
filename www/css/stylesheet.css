@@ -62,7 +62,7 @@
     -moz-box-shadow: -5px 5px 40px 5px rgba(0,0,0,0.9);
     
     min-width: auto;
-    max-width: 50%;
+    max-width: 40%;
     margin-bottom: 10%;
     padding: 10px;
     opacity: 0.85;
@@ -108,9 +108,14 @@ button {
 }
 
 button > a {
+    color: #ffffff;
     display: inherit;
     text-align: inherit;
     text-decoration: none;
+}
+
+button > a:visited {
+    color: #886aea;
 }
 
 .button-block {
@@ -122,6 +127,7 @@ button > a {
 
 .button-block:disabled {
     background-color: #c6c6c6;
+    
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
