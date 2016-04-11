@@ -24,38 +24,39 @@
                 
                 <section id="sign-in-container">
                     <header class="horizontal-inline-center">
-                        welcome to your<br>e-championship manager for<br>
+                        bem-vindo ao seu<br><em>e-championship manager</em> para<br>
                         
                         <div class="flex-center-row-container">
-                            <img src="img/logo/leagueoflegends-logo.png" id="game-logo"
+                            <img src="img/logo/leagueoflegends-logo.png" id="logo-game"
                                  alt="League of Legends">
-                            <img src="img/logo/pokemonshowdown-logo.png" id="game-logo"
-                                 alt="Pokémon Showdown">
                         </div>
                     </header>
                     
                     <form name="loginForm">
-                        <input type="text" name="username" placeholder="username" 
+                        <input type="text" name="username" placeholder="nome de usuário" 
                                ng-minlength="3" ng-model="newuser.username" required>
-                        <input type="password" name="password" placeholder="password" 
+                        <input type="password" name="password" placeholder="senha" 
                                ng-minlength="3" ng-model="newuser.password" required>
                     </form>
                     
                     <button class="button-clear">
-                        <a href="#/forgotpassword">Forgot your password?</a>
+                        <a href="#/forgotpassword">Esqueceu sua senha?</a>
                     </button>
 
                     <button class="button-block" type="submit" 
                             ng-disabled="loginForm.$invalid">
-                        <a href="#/home">Sign-me in!</a>
+                        <a href="#/home">Entrar!</a>
                     </button>
                     
                     <button class="button-clear">
-                        <a href="#/signup">Or click here<br>to sign up</a>
+                        <a href="#/signup">Ou clique aqui para<br>criar uma nova conta</a>
                     </button>
                     
-                    <pre>user = {{user | json}}</pre>
-                    <pre>newuser = {{newuser | json}}</pre>
+                    <!--
+                        Angular test:
+                        <pre>user = {{user | json}}</pre>
+                        <pre>newuser = {{newuser | json}}</pre>
+                    -->
                 </section>
             </div>
         </script>
@@ -67,38 +68,36 @@
                 
                 <section id="sign-in-container">
                     <header class="horizontal-inline-center">
-                        signup to a<br>e-championship manager for<br>
+                        comece já a usar seu<br><em>e-championship manager</em> para<br>
                         
                         <div class="flex-center-row-container">
-                            <img src="img/logo/leagueoflegends-logo.png" id="game-logo"
+                            <img src="img/logo/leagueoflegends-logo.png" id="logo-game"
                                  alt="League of Legends">
-                            <img src="img/logo/pokemonshowdown-logo.png" id="game-logo"
-                                 alt="Pokémon Showdown">
                         </div>
                     </header>
                     
                     <form name="signupForm">
-                        <input type="text" name="username" placeholder="username" 
+                        <input type="text" name="username" placeholder="nome de usuário" 
                                ng-minlength="3" ng-model="user.username" required>
-                        <input type="text" name="usernameconf" placeholder="username confirmation"
+                        <input type="text" name="usernameconf" placeholder="confirmar nome de usuário"
                                ng-minlenght="3" ng-model="user.usernameconf" required>
                         <input type="email" name="email" placeholder="email" 
                                ng-minlength="3" ng-model="user.email" required>
-                        <input type="email" name="emailconf" placeholder="email confirmation"
+                        <input type="email" name="emailconf" placeholder="confirmar email"
                                ng-minlenght="3" ng-model="user.emailconf" required>
-                        <input type="password" name="password" placeholder="password" 
+                        <input type="password" name="password" placeholder="senha" 
                                ng-minlength="3" ng-model="user.password" required>
-                        <input type="password" name="passwordconf" placeholder="password confirmation" 
+                        <input type="password" name="passwordconf" placeholder="confirmar senha" 
                                ng-minlength="3" ng-model="user.passwordconf" required>
                     </form>
 
                     <button class="button-block" type="submit" 
                             ng-disabled="signupForm.$invalid">
-                        <a href="#/home">Sign-me up!</a>
+                        <a href="#/home">Registrar!</a>
                     </button>
                     
                     <button class="button-clear">
-                        <a href="#/login">Back to login</a>
+                        <a href="#/login">Voltar para o login</a>
                     </button>
                     
                     <!-- <pre>user = {{user | json}}</pre> -->
@@ -112,17 +111,17 @@
                 <img src="img/logo/logo.svg" id="logo" alt="Welcome to Play Stadium">
                 
                 <section id="sign-in-container">
-                    Type in your email below to reset your password. You will receive an email in a few moments.
+                    Digite seu email abaixo para receber uma nova senha. Ela será enviada dentro de instantes.
                     <form name="forgotpasswordForm">
                         <input type="email" name="email" placeholder="type your email here"
                                ng-model="user.email" required>
                     </form>
                     
                     <button class="button-block" type="submit" 
-                            ng-disabled="forgotpasswordForm.$invalid">Send email</button>
+                            ng-disabled="forgotpasswordForm.$invalid">Enviar email</button>
                     
                     <button class="button-clear">
-                        <a href="#/login">Back to login</a>
+                        <a href="#/login">Voltar para o login</a>
                     </button>
                 </section>
             </div>
@@ -130,6 +129,14 @@
         
         <!-- Home view -->
         <script type="text/ng-template" id="www/templates/home/home.html">
+            <header id="header-bar">
+                <img src="img/logo/logo.svg" id="logo-header" alt="Welcome to Play Stadium">
+                <div class="flex-center-row-container">
+                    <a>Create Championship</a>
+                    <a>User</a>
+                    <a>Logout</a>
+                </div>
+            </header>
         </script>
         
         <!-- Create Championship view -->

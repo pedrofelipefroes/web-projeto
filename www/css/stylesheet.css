@@ -43,15 +43,38 @@
 
 /* IDs */
 
+#header-bar {
+    background-color: #000000;
+    border-bottom: 1px solid #121212;
+    color: #ffffff;
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 500;
+    height: 3em;
+    width: 100%;
+}
+
+#input-box {
+    display: block;
+    margin: 0 auto;
+}
+
+#input-box > p {
+    margin: 0 auto;
+}
+
 #logo {
     width: 40%;
     margin-top: 5%;
     margin-bottom: 2.5%;
 }
 
-#game-logo {    
+#logo-game {    
     width: 125px;
     padding: 5px;
+}
+
+#logo-header {
+    height: 90%;
 }
 
 #sign-in-container {
@@ -69,15 +92,6 @@
     
     font-family: 'Yantramanav', sans-serif;
     font-weight: 500;
-}
-
-#input-box {
-    display: block;
-    margin: 0 auto;
-}
-
-#input-box > p {
-    margin: 0 auto;
 }
 
 /* TAGS & DERIVATED CLASSES */
