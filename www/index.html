@@ -5,6 +5,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
         <script src="js/app.js"></script>
+        <script src="js/services.js"></script>
+        <script src="js/controllers.js"></script>
 
         <!-- Stylesheet & fonts -->
         <link href="css/stylesheet.css" rel="stylesheet">
@@ -34,9 +36,9 @@
                     
                     <form name="loginForm">
                         <input type="text" name="username" placeholder="username" 
-                               ng-minlength="3" ng-model="user.username" required>
+                               ng-minlength="3" ng-model="newuser.username" required>
                         <input type="password" name="password" placeholder="password" 
-                               ng-minlength="3" ng-model="user.password" required>
+                               ng-minlength="3" ng-model="newuser.password" required>
                     </form>
                     
                     <button class="button-clear">
@@ -52,7 +54,8 @@
                         <a href="#/signup">Or click here<br>to sign up</a>
                     </button>
                     
-                    <!-- <pre>user = {{user | json}}</pre> -->
+                    <pre>user = {{user | json}}</pre>
+                    <pre>newuser = {{newuser | json}}</pre>
                 </section>
             </div>
         </script>
@@ -123,6 +126,18 @@
                     </button>
                 </section>
             </div>
+        </script>
+        
+        <!-- Home view -->
+        <script type="text/ng-template" id="www/templates/home/home.html">
+        </script>
+        
+        <!-- Create Championship view -->
+        <script type="text/ng-template" id="www/templates/createchampionship/createchampionship.html">
+        </script>
+        
+        <!-- Error view -->
+        <script type="text/ng-template" id="www/templates/error/error.html">
         </script>
         
         <div ng-view></div>

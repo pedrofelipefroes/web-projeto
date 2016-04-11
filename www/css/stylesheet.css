@@ -61,8 +61,8 @@
     -webkit-box-shadow: -5px 5px 40px 5px rgba(0,0,0,0.9);
     -moz-box-shadow: -5px 5px 40px 5px rgba(0,0,0,0.9);
     
-    min-width: auto;
-    max-width: 40%;
+    min-width: 30%;
+    max-width: 30%;
     margin-bottom: 10%;
     padding: 10px;
     opacity: 0.85;
@@ -81,6 +81,10 @@
 }
 
 /* TAGS & DERIVATED CLASSES */
+
+a {
+    color: #0c60ee;
+}
 
 body {
     background: url(../img/background-image/background.jpg) no-repeat center center fixed;
@@ -108,7 +112,6 @@ button {
 }
 
 button > a {
-    color: #ffffff;
     display: inherit;
     text-align: inherit;
     text-decoration: none;
@@ -125,12 +128,24 @@ button > a:visited {
     transition: all 0.5s ease-in-out;
 }
 
+.button-block > a {
+    color: #ffffff;
+}
+
+.button-block > a:visited {
+    color: #ffffff;
+}
+
 .button-block:disabled {
     background-color: #c6c6c6;
     
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+}
+
+.button-block:disabled > a {
+    color: #444;
 }
 
 .button-clear {

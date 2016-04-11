@@ -18,22 +18,21 @@ app.config(function($routeProvider) {
         controller: 'signupCtrl'
     })
     
+    .when('/home', {
+        templateUrl: 'www/templates/home/home.html',
+        controller: 'homeCtrl'
+    })
+    
+    .when('/createchampionship', {
+        templateUrl: 'www/templates/createchampionship/createchampionship.html',
+        controller: 'createchampionshipCtrl'
+    })
+    
+    .when('/error', {
+        templateUrl: 'www/templates/error/error.html'
+    })
+    
     .otherwise({
         redirectTo: '/login'
     });
-});
-
-app.controller('loginCtrl', function($scope) {
-  $scope.user = {
-      username: '',
-      password: ''
-  };
-});
-
-app.controller('forgotpasswordCtrl', function($scope) {
-  $scope.message = 'Hello from the other side';
-});
-
-app.controller('signupCtrl', function($scope) {
-  $scope.message = 'Hello from the signup side';
 });
