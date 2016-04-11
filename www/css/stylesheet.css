@@ -25,7 +25,7 @@
 }
 
 .box-news {
-    margin: 2.5%;
+    margin: 1%;
 }
 
 .box-news > h2 {
@@ -76,6 +76,21 @@
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+}
+
+.img-news {
+    float: left;
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.img-news:hover {
+    transform: scale(1.1);
 }
 
 /* Display */
