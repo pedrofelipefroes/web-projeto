@@ -21,6 +21,10 @@ app.controller('homeCtrl', ['$scope', 'userService', function($scope, userServic
     $scope.message = 'Hello from the home side';
 }]);
 
-app.controller('createchampionshipCtrl', ['$scope', function($scope) {
+app.controller('mychampionshipsCtrl', ['$scope', function($scope) {
+    $scope.message = 'This is MYYYY championship';
+}]);
+
+app.controller('createchampionshipsCtrl', ['$scope', function($scope) {
     $scope.message = 'Hello from the champion side';
 }]);

@@ -129,13 +129,14 @@
         
         <!-- Home view -->
         <script type="text/ng-template" id="www/templates/home/home.html">
-            <header id="header-bar">
-                <img src="img/logo/logo.svg" id="logo-header" alt="Welcome to Play Stadium">
-                <div class="flex-center-row-container">
-                    <a>Create Championship</a>
-                    <a>User</a>
-                    <a>Logout</a>
-                </div>
+            <header class="header-bar">
+                <a href="#/home">
+                    <img src="img/logo/logo.svg" class="header-bar-left" id="logo-header" 
+                         alt="Play Stadium">
+                </a>
+                <a href="#/mychampionships" class="header-bar-left">Meus campeonatos</a>
+                <a href="#/createchampionships" class="header-bar-left">Criar campeonatos</a>
+                <a href="#/login" class="header-bar-right">Logout</a>
             </header>
         </script>
         

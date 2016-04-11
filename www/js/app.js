@@ -23,9 +23,14 @@ app.config(function($routeProvider) {
         controller: 'homeCtrl'
     })
     
-    .when('/createchampionship', {
-        templateUrl: 'www/templates/createchampionship/createchampionship.html',
-        controller: 'createchampionshipCtrl'
+    .when('/mychampionships', {
+        templateUrl: 'www/templates/mychampionships/mychampionships.html',
+        controller: 'mychampionshipsCtrl'
+    })
+    
+    .when('/createchampionships', {
+        templateUrl: 'www/templates/createchampionships/createchampionships.html',
+        controller: 'createchampionshipsCtrl'
     })
     
     .when('/error', {

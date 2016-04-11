@@ -32,6 +32,15 @@
     -webkit-justify-content: center;
 }
 
+.flex-row-align-center {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    
+    align-items: center;
+    -webkit-align-items: center;
+}
+
 .horizontal-inline-center {
     text-align: center;
 }
@@ -41,17 +50,36 @@
     margin: 0 auto;
 }
 
-/* IDs */
-
-#header-bar {
+.header-bar {
     background-color: #000000;
     border-bottom: 1px solid #121212;
     color: #ffffff;
     font-family: 'Yantramanav', sans-serif;
     font-weight: 500;
+    line-height: 3em;
+    
     height: 3em;
     width: 100%;
+    margin-top: -9px;
+    margin-left: -9px;
+    margin-right: -9px;
 }
+
+.header-bar-left {
+    float: left;
+    padding: 0 10px;
+}
+
+.header-bar-right {
+    float: right;
+    padding: 0 10px;
+}
+
+.header-bar-left > a {
+    color: #ffffff;
+}
+
+/* IDs */
 
 #input-box {
     display: block;
@@ -98,6 +126,7 @@
 
 a {
     color: #0c60ee;
+    text-decoration: none;
 }
 
 body {
@@ -128,7 +157,6 @@ button {
 button > a {
     display: inherit;
     text-align: inherit;
-    text-decoration: none;
 }
 
 button > a:visited {
