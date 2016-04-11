@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+
 /* CLASSES */
 
 /* Containers */
@@ -18,8 +20,25 @@
     font-weight: 500;
 }
 
-.signin-box {
+.box-signin {
     margin-bottom: 10%;
+}
+
+.box-news {
+    margin: 2.5%;
+}
+
+.box-news > h2 {
+    margin-top: 5px;
+}
+
+.box-news > h3 {
+    border-bottom: 1px solid #c6c6c6;
+    color: #f384ca;
+    font-family: 'Titillium Web', sans-serif;
+    font-style: italic;
+    margin: 2px 0;
+    text-align: right;
 }
 
 .header-bar {
@@ -87,8 +106,8 @@
     flex-direction: row;
     -webkit-flex-direction: row;
     
-    justify-content: space-around;
-    -webkit-justify-content: space-around;
+    justify-content: center;
+    -webkit-justify-content: center;
 }
 
 .flex-column-container {
