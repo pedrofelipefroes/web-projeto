@@ -14,8 +14,9 @@
     </head>
     
     <body>
+        
+         <!-- Login view -->
         <script type="text/ng-template" id="templates/www/login/login.html">
-           
             <div class="flex-center-column-container">
                 <img src="img/logo/logo.svg" id="logo" alt="Welcome to Play Stadium">
                 
@@ -36,12 +37,78 @@
                                ng-minlength="3" ng-model="user.username" required>
                         <input type="password" name="password" placeholder="password" 
                                ng-minlength="3" ng-model="user.password" required>
-                        <button class="button-clear">Forgot your password?</button>
                     </form>
-
-                    <button class="button-block" type="submit" ng-disabled="loginForm.$invalid">Sign-me in!</button>
                     
-                    <button class="button-clear">Or click here to sign up</button>
+                    <button class="button-clear">
+                        <a href="#/forgotpassword">Forgot your password?</a>
+                    </button>
+
+                    <button href="#/home" class="button-block" type="submit" 
+                            ng-disabled="loginForm.$invalid">Sign-me in!</button>
+                    
+                    <button href="#/signup" class="button-clear">Or click here<br>to sign up</button>
+                    
+                    <!-- <pre>user = {{user | json}}</pre> -->
+                </section>
+            </div>
+        </script>
+        
+        <!-- Signup view -->
+        <script type="text/ng-template" id="templates/www/signup/signup.html">
+            <div class="flex-center-column-container">
+                <img src="img/logo/logo.svg" id="logo" alt="Welcome to Play Stadium">
+                
+                <section id="sign-in-container">
+                    <header class="horizontal-inline-center">
+                        welcome to your<br>e-championship manager for<br>
+                        
+                        <div class="flex-center-row-container">
+                            <img src="img/logo/leagueoflegends-logo.png" id="game-logo"
+                                 alt="League of Legends">
+                            <img src="img/logo/pokemonshowdown-logo.png" id="game-logo"
+                                 alt="Pokémon Showdown">
+                        </div>
+                    </header>
+                    
+                    <form name="loginForm">
+                        <input type="text" name="username" placeholder="username" 
+                               ng-minlength="3" ng-model="user.username" required>
+                        <input type="password" name="password" placeholder="password" 
+                               ng-minlength="3" ng-model="user.password" required>
+                    </form>
+                    
+                    <button class="button-clear">
+                        <a href="#/forgotpassword">Forgot your password?</a>
+                    </button>
+
+                    <button href="#/home" class="button-block" type="submit" 
+                            ng-disabled="loginForm.$invalid">Sign-me in!</button>
+                    
+                    <button href="#/signup" class="button-clear">Or click here<br>to sign up</button>
+                    
+                    <!-- <pre>user = {{user | json}}</pre> -->
+                </section>
+            </div>
+        </script>
+        
+        <!-- Forgot Password view -->
+        <script type="text/ng-template" id="templates/www/forgotpassword/forgotpassword.html">
+            <div class="flex-center-column-container">
+                <img src="img/logo/logo.svg" id="logo" alt="Welcome to Play Stadium">
+                
+                <section id="sign-in-container">
+                    Type in your email below to reset your password. You will receive an email in a few moments.
+                    <form name="forgotpasswordForm">
+                        <input type="email" name="email" placeholder="type your email here"
+                               ng-model="user.email" required>
+                    </form>
+                    
+                    <button class="button-block" type="submit" 
+                            ng-disabled="forgotpasswordForm.$invalid">Send email</button>
+                    
+                    <button class="button-clear">
+                        <a href="#/login">Back to login</a>
+                    </button>
                 </section>
             </div>
         </script>

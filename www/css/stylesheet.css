@@ -61,7 +61,8 @@
     -webkit-box-shadow: -5px 5px 40px 5px rgba(0,0,0,0.9);
     -moz-box-shadow: -5px 5px 40px 5px rgba(0,0,0,0.9);
     
-    min-width: 20%;
+    min-width: 25%;
+    max-width: 25%;
     padding: 10px;
     opacity: 0.85;
     
@@ -79,6 +80,7 @@
 }
 
 /* TAGS & DERIVATED CLASSES */
+
 body {
     background: url(../img/background-image/background.jpg) no-repeat center center fixed;
     background-size: cover;
@@ -104,6 +106,12 @@ button {
     height: 3em;
 }
 
+button > a {
+    display: inherit;
+    text-align: inherit;
+    text-decoration: none;
+}
+
 .button-block {
     background-color: #0c60ee;
     -webkit-transition: all 0.5s ease-in-out;
@@ -123,14 +131,14 @@ button {
     color: #0c60ee;
 }
 
-form > .button-clear {
+form + .button-clear {
     font-size: 0.75em;
     padding-left: 15px !important;
     
     display: inline;
     width: auto;
     height: 2em;
-    margin-top: 0 !important;
+    margin-top: 0px !important;
 }
 
 form {

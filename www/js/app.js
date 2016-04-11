@@ -13,6 +13,11 @@ app.config(function($routeProvider) {
         controller: 'forgotpasswordCtrl'
     })
     
+    .when('/signup', {
+        templateUrl: 'templates/www/signup/signup.html',
+        controller: 'signupCtrl'
+    })
+    
     .otherwise({
         redirectTo: '/login'
     });
@@ -20,7 +25,7 @@ app.config(function($routeProvider) {
 
 app.controller('loginCtrl', function($scope) {
   $scope.user = {
-      name: '',
+      username: '',
       password: ''
   };
 });
