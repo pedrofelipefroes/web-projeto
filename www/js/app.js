@@ -38,6 +38,6 @@ app.config(function($routeProvider) {
     })
     
     .otherwise({
-        redirectTo: '/login'
+        redirectTo: '/error'
     });
 });

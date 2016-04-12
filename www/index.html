@@ -193,6 +193,28 @@
         
         <!-- Error view -->
         <script type="text/ng-template" id="www/templates/error/error.html">
+            <header class="header-bar">
+                <a href="#/home">
+                    <img src="img/logo/logo.svg" class="header-bar-left" id="logo-header" 
+                         alt="Play Stadium">
+                </a>
+                <a href="#/mychampionships" class="header-bar-left">Meus campeonatos</a>
+                <a href="#/createchampionships" class="header-bar-left">Criar campeonatos</a>
+                <a href="#/login" class="header-bar-right">Logout</a>
+            </header>
+            
+            <div id="card-hidden">
+                em breve<br>
+                <img src="img/ticket/pokemonshowdown-logo.png" alt="Pokémon Showdown" id="card-image">
+                <img src="img/ticket/pokeball.png" alt="Pokémon Showdown" id="card-image-right">
+            </div>
+            
+            <div id="error-block">
+                <h2> ERROR 404 </h2>
+                <h3 class="news-headline" id="message-error"> Aparentemente não há nada para você nesta página... a não ser eu. Por acaso você não quer ser meu amigo? </h2>
+            </div>
+
+                <img src="img/error/amumu.png" alt="Master Yi is noob material" id="img-error">
         </script>
         
         <div ng-view></div>

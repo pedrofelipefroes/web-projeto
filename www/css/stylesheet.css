@@ -205,6 +205,30 @@
     float: right;
 }
 
+#error-block {
+    background-color: ghostwhite;
+    border-radius: 15px;
+    box-shadow: -5px 5px 40px 5px rgba(0,0,0,0.9);
+    -webkit-box-shadow: -5px 5px 40px 5px rgba(0,0,0,0.9);
+    -moz-box-shadow: -5px 5px 40px 5px rgba(0,0,0,0.9);
+    
+    min-width: 10%;
+    max-width: 10%;
+    margin: 5% 0% 0% 40%;
+    padding: 10px;
+    opacity: 0.85;
+    
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 500;
+    float: left;
+    text-align: center;
+}
+
+#img-error {
+    float: right;
+    margin: -10% 0% 0% 50%;
+}
+
 #input-box {
     display: block;
     margin: 0 auto;
@@ -227,6 +251,10 @@
 
 #logo-header {
     height: 90%;
+}
+
+#message-error {
+    margin-top: 100%;
 }
 
 #slideshow {
