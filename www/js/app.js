@@ -33,6 +33,10 @@ app.config(function($routeProvider) {
         controller: 'createchampionshipsCtrl'
     })
     
+    .when('/maintenance', {
+        templateUrl: 'www/templates/maintenance/maintenance.html'
+    })
+    
     .when('/error', {
         templateUrl: 'www/templates/error/error.html'
     })
