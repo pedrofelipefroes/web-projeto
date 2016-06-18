@@ -11,6 +11,10 @@ app.config(function ($routeProvider) {
         templateUrl: '/templates/signup/signup.html',
         controller: 'signupCtrl'        
     })
+    .when('/forgot', {
+        templateUrl: '/templates/forgot/forgot.html',
+        controller: 'forgotCtrl'
+    })
     .otherwise({
         redirectTo: '/login'
     })
