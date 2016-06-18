@@ -1,0 +1,33 @@
+<div class="flex-column welcome-container">
+    
+    <!-- Welcome header -->
+    <header class="flex-column flex-align-center">
+        <img src="../../img/logo/logo_playstadium.svg" class="logo" alt="Play Stadium">
+        <span>YOUR <em>E-CHAMPIONSHIP MANAGER</em> FOR</span>
+        <img src="../../img/logo/logo_leagueoflegends.svg" class="logo-game" alt="League of Legends">
+    </header>
+    
+    <!-- Signup form -->
+    <form name="signupForm" class="user-form">
+        <input type="text" name="username" placeholder="username" required
+               ng-minlength="3" ng-model="user.username">
+        <input type="text" name="username" placeholder="confirm username" required
+               ng-minlength="3" ng-model="user.username">
+        <input type="password" name="password" placeholder="password" required
+               ng-minlength="3" ng-model="user.password">
+        <input type="password" name="password" placeholder="confirm password" required
+               ng-minlength="3" ng-model="user.password">
+        
+        <div class="flex-column flex-align-center">
+            <button class="button button-outline">
+                <a href="#/home"
+                   ng-disabled="signupForm.$invalid">Sign up</a>
+            </button>
+
+            <button class="button button-clear text-center">
+                <a href="#/login"><em>Cancel</em></a>
+            </button>
+        </div>
+    </form>
+
+</div>

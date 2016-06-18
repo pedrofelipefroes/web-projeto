@@ -2,13 +2,18 @@ var app = angular.module('playstadium', ['ngRoute']);
 
 app.config(function ($routeProvider) {
     $routeProvider
-        .when('/login', {
-            templateUrl: '/templates/login/login.html'
-            , controller: 'loginCtrl'
-        })
-        .otherwise({
-            redirectTo: '/login'
-        })
+        
+    .when('/login', {
+        templateUrl: '/templates/login/login.html',
+        controller: 'loginCtrl'
+    })
+    .when('/signup', {
+        templateUrl: '/templates/signup/signup.html',
+        controller: 'signupCtrl'        
+    })
+    .otherwise({
+        redirectTo: '/login'
+    })
 })
 
 //var app = angular.module('playstadiumApp', ['ngRoute']);
