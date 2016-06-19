@@ -9,8 +9,8 @@ app.controller('loginCtrl', ['$scope', 'userService', function($scope, userServi
     $(document).ready(function () {
         $('#janna').lazylinepainter({
             "svgData": janna,
-            "strokeWidth": 2,
-            "strokeColor": "#fff"
+            "strokeWidth": 1.5,
+            "strokeColor": "#F384CA"
         }).lazylinepainter('paint');
     });
 }]);

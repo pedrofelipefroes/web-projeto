@@ -29,13 +29,16 @@ em {
 }
 
 .button-clear > a {
+    display: inline-block;
     color: #89BDEF;
     
-    transition: color 1.5s;
+    transition: all 0.1s ease-in-out;
 }
 
 .button-clear > a:hover {
     color: #00D8CB;
+    
+    transform: scale(0.9);
 }
 
 .button-outline {
@@ -46,12 +49,14 @@ em {
     padding: 10px;
     margin-top: 5%;
     
-    transition: border 1.5s ease-in-out, color 1.5s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 .button-outline:hover {
     color: #00D8CB;
     border: solid 2px #00D8CB;
+    
+    transform: scale(0.9);
 }
 
 .flex-column {
@@ -80,6 +85,21 @@ em {
     margin-top: 5%;
 }
 
+.user-form input {
+    border: none;
+    border-bottom: solid 2px #454e55;
+    color: #FFFFFF;
+    background-color: transparent;
+    display: block;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 2em;
+    margin-top: 2.5%;
+    padding-bottom: 2.5%;
+    width: 100%;
+    
+    transition: all 1.5s ease-in-out;
+}
+
 .user-form input.ng-valid.ng-touched {
     color: #00D8CB;
     transition: color 1.5s ease-in-out;
@@ -106,22 +126,8 @@ em {
     color: #F384CA;
 }
 
-.user-form > input {
-    border: none;
-    border-bottom: solid 2px #454e55;
-    color: #FFFFFF;
-    background-color: transparent;
-    display: block;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 3em;
-    margin-top: 3%;
-    width: 100%;
-    
-    transition: border 1.5s;
-}
-
 .user-form > input:focus {
-    border-bottom: solid 2px #00D8CB;
+    border-bottom: solid 2px #FFFFFF;
     outline: none;
 }
 
@@ -135,4 +141,11 @@ em {
     font-size: .8em;
     margin-top: 5%;
     width: 33.33%;
+}
+
+#janna {
+    position: absolute;
+    left: 30%;
+    top: -30%;
+    z-index: -1;
 }

@@ -1,3 +1,5 @@
+<div id="janna"></div>
+
 <div class="flex-column welcome-container">
     
     <!-- Welcome header -->
@@ -9,10 +11,10 @@
     
     <!-- Login form -->
     <form name="loginForm" class="user-form">
-        <input type="text" name="username" placeholder="username" required
-               ng-minlength="3" ng-model="user.username">
+        <input type="email" name="email" placeholder="email" required
+               ng-model="user.email">
         <input type="password" name="password" placeholder="password" required
-               ng-minlength="3" ng-model="user.password">
+               ng-minlength="6" ng-model="user.password">
         
         <button class="button button-clear">
             <a href="#/forgot">Forgot your password?</a>
@@ -29,7 +31,6 @@
             </button>
         </div>
     </form>
-
 </div>
 
 
