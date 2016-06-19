@@ -1,0 +1,28 @@
+<div class="flex-column welcome-container">
+    
+    <!-- Welcome header -->
+    <header class="flex-column flex-align-center">
+        <img src="../../img/logo/logo_playstadium.svg" class="logo" alt="Play Stadium">
+        <span>YOUR <em>E-CHAMPIONSHIP MANAGER</em> FOR</span>
+        <img src="../../img/logo/logo_leagueoflegends.svg" class="logo-game" alt="League of Legends">
+    </header>
+    
+    <!-- Signup form -->
+    <form name="forgotForm" class="user-form">
+        Insert your email below so we can send your password:
+        <input type="email" name="username" placeholder="email" required
+               ng-minlength="3" ng-model="user.email">
+        
+        <div class="flex-column flex-align-center">
+            <button class="button button-outline">
+                <a href="#/home"
+                   ng-disabled="forgotForm.$invalid">Send email</a>
+            </button>
+
+            <button class="button button-clear text-center">
+                <a href="#/login"><em>Cancel</em></a>
+            </button>
+        </div>
+    </form>
+
+</div>

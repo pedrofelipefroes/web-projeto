@@ -1,0 +1,83 @@
+<div id="janna"></div>
+
+<div class="flex-column welcome-container">
+    
+    <!-- Welcome header -->
+    <header class="flex-column flex-align-center">
+        <img src="../../img/logo/logo_playstadium.svg" class="logo" alt="Play Stadium">
+        <span>YOUR <em>E-CHAMPIONSHIP MANAGER</em> FOR</span>
+        <img src="../../img/logo/logo_leagueoflegends.svg" class="logo-game" alt="League of Legends">
+    </header>
+    
+    <!-- Login form -->
+    <form name="loginForm" class="user-form">
+        <input type="email" name="email" placeholder="email" required
+               ng-model="user.email">
+        <input type="password" name="password" placeholder="password" required
+               ng-minlength="6" ng-model="user.password">
+        
+        <button class="button button-clear">
+            <a href="#/forgot">Forgot your password?</a>
+        </button>
+        
+        <div class="flex-column flex-align-center">
+            <button class="button button-outline">
+                <a href="#/home"
+                   ng-disabled="loginForm.$invalid">Login</a>
+            </button>
+
+            <button class="button button-clear text-center">
+                <a href="#/signup">Or click here to<br><em>sign up</em></a>
+            </button>
+        </div>
+    </form>
+</div>
+
+
+
+<!--
+    <div class="flexbox-row">
+    
+    <div class="container-round inner-shadow">
+        <header>
+            <img src="../../img/logo/logo_playstadium.svg" class="logo" alt="Play Stadium">
+            <p>um <em>e-championship manager</em> de</p>
+            <img src="../../img/logo/logo_leagueoflegends.svg" class="logo-game" alt="League of Legends">
+        </header>
+    </div>
+-->
+    
+    
+<!--    <div id="janna"></div>-->
+
+    
+    
+    
+    <!--    <div class="container-round">-->
+
+    <!--
+        <header class="welcome-header">
+            <p>bem-vindo ao seu<br><em>e-championship<br>manager</em> para</p>
+            <img src="../../img/logo/logo_leagueoflegends.svg" class="logo-game" alt="League of Legends">
+        </header>
+        
+        <form name="loginForm" class="user-form">
+            <input type="text" name="username" placeholder="nome de usuário" required
+                   ng-minlength="3" ng-model="user.username">
+            <input type="password" name="password" placeholder="senha" required
+                   ng-minlenght="3" ng-model="user.password">
+            
+            <button class="button-clear">
+                <a href="#/forgotpassword">Esqueceu sua senha?</a>
+            </button>
+            
+            <button class="button-block" type="submit"
+                    ng-disabled="loginForm.$invalid">
+                <a href="#/home">Entrar</a>
+            </button>
+            
+            <button class="button-clear">
+                <a href="#/signup">Ou clique aqui para<br>criar uma nova conta</a>
+            </button>
+        </form>
+-->

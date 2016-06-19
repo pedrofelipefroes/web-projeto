@@ -1,0 +1,40 @@
+<div class="flex-center-column-container">
+    <img src="img/logo/logo.svg" id="logo" alt="Welcome to Play Stadium">
+
+    <section class="box-container box-signin">
+        <header class="horizontal-inline-center">
+            bem-vindo ao seu<br><em>e-championship manager</em> para<br>
+
+            <div class="flex-center-row-container">
+                <img src="img/logo/leagueoflegends-logo.png" id="logo-game"
+                     alt="League of Legends">
+            </div>
+        </header>
+
+        <form name="loginForm">
+            <input type="text" name="username" placeholder="nome de usuário" 
+                   ng-minlength="3" ng-model="newuser.username" required>
+            <input type="password" name="password" placeholder="senha" 
+                   ng-minlength="3" ng-model="newuser.password" required>
+        </form>
+
+        <button class="button-clear">
+            <a href="#/forgotpassword">Esqueceu sua senha?</a>
+        </button>
+
+        <button class="button-block" type="submit" 
+                ng-disabled="loginForm.$invalid">
+            <a href="#/home">Entrar!</a>
+        </button>
+
+        <button class="button-clear">
+            <a href="#/signup">Ou clique aqui para<br>criar uma nova conta</a>
+        </button>
+
+        <!--
+            Angular test:
+            <pre>user = {{user | json}}</pre>
+            <pre>newuser = {{newuser | json}}</pre>
+        -->
+    </section>
+</div>
