@@ -20,6 +20,14 @@ app.controller('signinCtrl', ['$http', '$scope', 'userService', function($http, 
             "strokeColor": "#F384CA"
         }).lazylinepainter('paint');
     });
+    
+    $(document).ready(function () {
+        $('#janna').lazylinepainter({
+            "svgData": janna,
+            "strokeWidth": 1.5,
+            "strokeColor": "#F384CA"
+        }).lazylinepainter('paint');
+    });
 }]);
 
 
