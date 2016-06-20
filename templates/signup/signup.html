@@ -1,30 +1,30 @@
 <div class="flex-column welcome-container">
-    
+
     <!-- Welcome header -->
     <header class="flex-column flex-align-center">
         <img src="../../img/logo/logo_playstadium.svg" class="logo" alt="Play Stadium">
         <span>YOUR <em>E-CHAMPIONSHIP MANAGER</em> FOR</span>
         <img src="../../img/logo/logo_leagueoflegends.svg" class="logo-game" alt="League of Legends">
     </header>
-    
+
     <!-- Signup form -->
-    <form name="signupForm" class="user-form">
+    <form name="signupForm" class="user-form" method="post" action="/users/">
         <input type="text" name="username" placeholder="username" required
-               ng-minlength="3" ng-model="newuser.username">
+               ng-minlength="3" ng-model="newuser.username" id="username">
         <input type="email" name="username" placeholder="email" required
-               ng-minlength="3" ng-model="newuser.email">
+               ng-minlength="3" ng-model="newuser.email" id="email">
         <input type="email" name="username" placeholder="confirm email" required
                ng-minlength="3">
         <input type="password" name="password" placeholder="password" required
-               ng-minlength="3" ng-model="newuser.password">
+               ng-minlength="3" ng-model="newuser.password" id="password">
         <input type="password" name="password" placeholder="confirm password" required
                ng-minlength="3">
-        
+
         <div class="flex-column flex-align-center">
-            <a href="#/home" class="button button-outline"
+            <button type="submit" href="#/home" class="button button-outline"
                    ng-disabled="signupForm.$invalid">Sign up</a>
 
-            <a href="#/login" class="button button-clear"><em>Cancel</em></a>
+            <button href="#/login" class="button button-clear"><em>Cancel</em></a>
         </div>
     </form>
 </div>
