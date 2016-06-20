@@ -5,10 +5,10 @@ var router = express.Router();
 
 /* GET lista de pessoas. */
 router.get('/', function(req, res, next) {
-  /*var email = db.escape(req.body.desc.email);
-  var password = db.escape(req.body.desc.password);*/
-  res.send(404, req.body);
-/*
+  var email = db.escape(req.body.email);
+  var password = db.escape(req.body.password);
+  //res.send(404, req.body);
+
   //db.query('SELECT * FROM user WHERE user.email = ' + email
   db.query('SELECT * FROM user WHERE user.email = "iggyazalea@gmail.com"',
     function(err, rows) {
@@ -26,7 +26,7 @@ router.get('/', function(req, res, next) {
           res.send(404, 'Email not registered');
         }
       }
-  })*/
+  })
 
   /*db.query({
     sql: ('SELECT * FROM user WHERE user.email = ' + req.body.email),
