@@ -3,9 +3,9 @@ app.controller('signinCtrl', ['$http', '$scope', 'userService', function($http, 
 
     $scope.userSignup = function (user) {
         $http.post('/users/', {
-            username: user.username,
-            email: user.email,
-            password: user.password
+            username: $scope.user.username,
+            email: $scope.user.email,
+            password: $scope.user.password
         })
             .success(function (data) {
             console.log('yey!');
@@ -21,7 +21,7 @@ app.controller('signinCtrl', ['$http', '$scope', 'userService', function($http, 
         $('#annie').lazylinepainter({
             "svgData": annie,
             "strokeWidth": 1.5,
-            "strokeColor": "#F384CA"
+            "strokeColor": "#FF5656"
         }).lazylinepainter('paint');
     });
 
