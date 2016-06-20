@@ -5,19 +5,20 @@ var router = express.Router();
 
 /* GET lista de pessoas. */
 router.get('/', function(req, res, next) {
-  var email = db.escape(req.body.email);
-  var password = db.escape(req.body.password);
-
-  /*db.query('SELECT * FROM user WHERE user.email = ' + email*/
+  /*var email = db.escape(req.body.desc.email);
+  var password = db.escape(req.body.desc.password);*/
+  res.send(404, req.body);
+/*
+  //db.query('SELECT * FROM user WHERE user.email = ' + email
   db.query('SELECT * FROM user WHERE user.email = "iggyazalea@gmail.com"',
     function(err, rows) {
       if (err) { res.send(404, 'Couldnt get user'); }
       else {
-        /*res.redirect('/');*/
+        //res.redirect('/');
         if (rows.length == 1)
         {
           if (rows[0].password = password) {
-              res.send(404, 'Correct password!');
+              res.send(404, password);
           } else {
               res.send(404, 'Incorrect password!');
           }
@@ -25,7 +26,7 @@ router.get('/', function(req, res, next) {
           res.send(404, 'Email not registered');
         }
       }
-  })
+  })*/
 
   /*db.query({
     sql: ('SELECT * FROM user WHERE user.email = ' + req.body.email),
