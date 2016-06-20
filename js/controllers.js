@@ -1,19 +1,7 @@
 app.controller('signinCtrl', ['$http', '$scope', 'userService', function($http, $scope, userService) {
     $scope.user = {};
 
-    $scope.userSignup = function (user) {
-        $http.post('/users/', {
-            username: $scope.user.username,
-            email: $scope.user.email,
-            password: $scope.user.password
-        })
-            .success(function (data) {
-            console.log('yey!');
-        })
-            .error(function (data) {
-            console.log('no yey!');
-        });
-    };
+    $scope.userSignup = function (user) {};
 
 //    userService.addUser($scope.newuser.username, $scope.newuser.password);
 
