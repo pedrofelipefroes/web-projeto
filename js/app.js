@@ -5,15 +5,15 @@ app.config(function ($routeProvider) {
         
     .when('/login', {
         templateUrl: '/templates/login/login.html',
-        controller: 'loginCtrl'
+        controller: 'signinCtrl'
     })
     .when('/signup', {
         templateUrl: '/templates/signup/signup.html',
-        controller: 'signupCtrl'        
+        controller: 'signinCtrl'        
     })
     .when('/forgot', {
         templateUrl: '/templates/forgot/forgot.html',
-        controller: 'forgotCtrl'
+        controller: 'signinCtrl'
     })
     .otherwise({
         redirectTo: '/login'

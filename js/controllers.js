@@ -1,10 +1,17 @@
-app.controller('loginCtrl', ['$scope', 'userService', function($scope, userService) {
-    $scope.newuser = {
-        username: '',
-        password: ''
+app.controller('signinCtrl', ['$http', '$scope', 'userService', function($http, $scope, userService) {
+    $scope.user = {};
+    
+    $scope.userSignup = function (user) {
+        $http.post('/users/', user)
+            .success(function (data) {
+            console.log('yey!');
+        })
+            .error(function (data) {
+            console.log('no yey!');
+        });
     };
     
-    userService.addUser($scope.newuser.username, $scope.newuser.password);
+//    userService.addUser($scope.newuser.username, $scope.newuser.password);
     
     $(document).ready(function () {
         $('#annie').lazylinepainter({
@@ -14,6 +21,7 @@ app.controller('loginCtrl', ['$scope', 'userService', function($scope, userServi
         }).lazylinepainter('paint');
     });
 }]);
+
 
 //
 //app.controller('forgotpasswordCtrl', ['$scope', function($scope) {
