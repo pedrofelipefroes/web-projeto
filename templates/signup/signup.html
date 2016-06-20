@@ -24,7 +24,9 @@
 
         <div class="flex-column flex-align-center">
             <button type="submit" href="#/home" class="button button-outline"
-                   ng-disabled="signupForm.$invalid">Sign up</button>
+                    ng-click="userSignup(user)" ng-disabled="signupForm.$invalid">
+                Sign up
+            </button>
 
             <a href="#/login" class="button button-clear"><em>Cancel</em></a>
         </div>
