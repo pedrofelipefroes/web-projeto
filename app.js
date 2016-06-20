@@ -14,9 +14,9 @@ var routes = require('./routes/index');
 var app = express();
 
 // view engine setup
-/*app.set('views', path.join(__dirname));
-app.set('view engine', 'html');*/
-app.use(express.static(path.join(__dirname, 'public')));
+app.set('views', path.join(__dirname));
+app.set('view engine', 'html');
+app.use(express.static(path.join(__dirname)));
 
 // override with POST having ?_method=DELETE
 app.use(methodOverride('_method', { methods: ['GET', 'POST'] }));
