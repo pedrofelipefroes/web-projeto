@@ -1,0 +1,156 @@
+@import 'https://fonts.googleapis.com/css?family=Source+Code+Pro:200';
+
+/*
+ * BODY & DISPLAY CONTAINERS
+ * BUTTONS & LINKS
+ * TEXT STYLES
+ */
+
+
+/* BODY & DISPLAY CONTAINERS */
+
+body {
+    background-color: #111314;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.welcome-container {
+    color: #FFFFFF;
+    font-family: 'Source Code Pro', monospace;
+    font-size: .8em;
+    margin-top: 5%;
+    width: 33.33%;
+}
+
+/* BUTTONS & LINKS */
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    font-family: 'Source Code Pro', monospace;
+    margin-top: 5%;
+    text-transform: uppercase;
+}
+
+.button-clear {
+    color: #89BDEF;
+    display: block;
+    font-size: 1em;
+    margin-top: 2.5%;
+    
+    transition: all 0.1s ease-in-out;
+}
+
+.button-clear:visited {
+    color: #89BDEF;
+}
+
+.button-clear:hover {
+    color: #00D8CB;
+    
+    transform: scale(0.9);
+}
+
+.button-outline {
+    color: #F384CA;
+    border: solid 2px #F384CA;
+    border-radius: 10px;
+    font-size: 2.5em;
+    padding: 10px;
+    margin-top: 5%;
+    
+    transition: all 0.1s ease-in-out;
+}
+
+.button-outline:visited {
+    color: #F384CA;
+}
+
+.button-outline:hover {
+    color: #00D8CB;
+    border: solid 2px #00D8CB;
+    
+    transform: scale(0.9);
+}
+
+/* FORMS */
+
+.user-form {
+    margin-top: 5%;
+}
+
+.user-form input {
+    border: none;
+    border-bottom: solid 2px #454e55;
+    color: #FFFFFF;
+    background-color: transparent;
+    display: block;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 2em;
+    margin-top: 2.5%;
+    padding-bottom: 2.5%;
+    width: 100%;
+    
+    transition: all 1.5s ease-in-out;
+}
+
+.user-form input:focus {
+    border-bottom: solid 2px #FFFFFF;
+    outline: none;
+}
+
+.user-form input.ng-valid.ng-touched {
+    color: #00D8CB;
+    transition: color 1.5s ease-in-out;
+}
+
+.user-form input.ng-invalid.ng-touched {
+    color: #FF5656;
+    transition: color 1.5s ease-in-out;
+}
+
+.user-form input::-webkit-input-placeholder {
+    color: #454e55;
+}
+
+/* IMAGE STYLES */
+
+.logo {
+    width: 75%;
+}
+
+.logo-game {
+    margin-top: 2%;
+    width: 25%
+}
+
+#janna {
+    position: absolute;
+    left: 30%;
+    top: -30%;
+    z-index: -1;
+}
+
+/* TEXT STYLES */
+
+em {
+    font-size: 1.25em;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.text-center {
+    text-align: center;
+}

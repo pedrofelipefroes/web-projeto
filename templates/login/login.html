@@ -1,0 +1,30 @@
+<div id="janna"></div>
+
+<div class="flex-column welcome-container">
+    
+    <!-- Welcome header -->
+    <header class="flex-column flex-align-center">
+        <img src="../../img/logo/logo_playstadium.svg" class="logo" alt="Play Stadium">
+        <span>YOUR <em>E-CHAMPIONSHIP MANAGER</em> FOR</span>
+        <img src="../../img/logo/logo_leagueoflegends.svg" class="logo-game" alt="League of Legends">
+    </header>
+    
+    <!-- Login form -->
+    <form name="loginForm" class="user-form">
+        <input type="email" name="email" placeholder="email" required
+               ng-model="user.email">
+        <input type="password" name="password" placeholder="password" required
+               ng-minlength="6" ng-model="user.password">
+        
+        <a href="#/forgot" class="button button-clear">Forgot your password?</a>
+        
+        <div class="flex-column flex-align-center">
+            <a href="#/home" class="button button-outline"
+               ng-disabled="loginForm.$invalid">Login</a>
+            
+            <a href="#/signup" class="button button-clear text-center">
+                Or click here to<br><em>sign up</em>
+            </a>
+        </div>
+    </form>
+</div>
