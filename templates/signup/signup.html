@@ -13,13 +13,13 @@
     <form name="signupForm" class="user-form" method="post" action="/users/">
         <input type="text" name="username" placeholder="username" required
                ng-minlength="3" ng-model="user.username" id="username">
-        <input type="email" name="username" placeholder="email" required
+        <input type="email" name="email" placeholder="email" required
                ng-minlength="3" ng-model="user.email" id="email">
-        <input type="email" name="username" placeholder="confirm email" required
+        <input type="email" name="emailconf" placeholder="confirm email" required
                ng-minlength="3">
         <input type="password" name="password" placeholder="password" required
                ng-minlength="3" ng-model="user.password" id="password">
-        <input type="password" name="password" placeholder="confirm password" required
+        <input type="password" name="passwordconf" placeholder="confirm password" required
                ng-minlength="3">
 
         <div class="flex-column flex-align-center">

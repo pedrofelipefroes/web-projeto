@@ -2,7 +2,11 @@ app.controller('signinCtrl', ['$http', '$scope', 'userService', function($http, 
     $scope.user = {};
     
     $scope.userSignup = function (user) {
-        $http.post('/users/', user)
+        $http.post('/users/', {
+            username: user.username,
+            email: user.email,
+            password: user.password
+        })
             .success(function (data) {
             console.log('yey!');
         })

@@ -6,8 +6,10 @@
  * FORMS
  * IMAGE STYLES
  * TEXT STYLES
+ * 
+ * RESPONSIVE MEDIA
+ *
  */
-
 
 /* BODY & DISPLAY CONTAINERS */
 
@@ -29,7 +31,6 @@ body {
     font-family: 'Source Code Pro', monospace;
     font-size: .8em;
     margin-top: 5%;
-    width: 33.33%;
 }
 
 /* BUTTONS & LINKS */
@@ -130,7 +131,7 @@ a {
 /* IMAGE STYLES */
 
 .lineart {
-    position: absolute;
+    position: fixed;
     left: 30%;
     top: -30%;
     z-index: -1;
@@ -155,4 +156,24 @@ em {
 
 .text-center {
     text-align: center;
+}
+
+/* RESPONSIVE MEDIA */
+
+@media (min-width: 801px) {
+    .welcome-container {
+        width: 33.33%;
+    }
+}
+
+@media (min-width: 481px) and (min-width: 800px) {
+    .welcome-container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-container {
+        width: 90%;
+    }
 }

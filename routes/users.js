@@ -21,14 +21,14 @@ router.get('/', function(req, res, next) {
 
 /* POST registra uma nova pessoa */
 router.post('/', function(req, res) {
-  var nickname = db.escape(req.body.user.username);
-  var email = db.escape(req.body.user.email);
-  var password = db.escape(req.body.user.password);
+  var username = db.escape(req.body.username);
+  var email = db.escape(req.body.email);
+  var password = db.escape(req.body.password);
   //var pictureUrl = db.escape(req.body.pictureUrl);
   var pictureUrl = 'null';
   //console.log(nickname + " " + email + " " + password);
 
-  db.query('INSERT INTO user (nickname, email, password, pictureUrl) VALUES ("' + nickname + '","' + email + '","' + password + '",' + pictureUrl + ')',
+  db.query('INSERT INTO user (nickname, email, password, pictureUrl) VALUES ("' + username + '","' + email + '","' + password + '",' + pictureUrl + ')',
   /*db.query('INSERT INTO user (nickname, email, password, pictureUrl) VALUES ("Vilma", "vilma@uol.com.br", "987", null)',*/
   /*db.query('SELECT * FROM user',*/
     function(err, result) {
