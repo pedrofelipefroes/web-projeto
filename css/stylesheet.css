@@ -166,14 +166,14 @@ em {
     }
 }
 
-@media (min-width: 481px) and (min-width: 800px) {
+@media (min-width: 481px) and (max-width: 800px) {
     .welcome-container {
-        width: 50%;
+        width: 75%;
     }
 }
 
 @media (max-width: 480px) {
     .welcome-container {
-        width: 90%;
+        width: 100%;
     }
 }
