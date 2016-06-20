@@ -132,7 +132,6 @@ a {
 
 .lineart {
     position: fixed;
-    left: 30%;
     top: -30%;
     z-index: -1;
 }
@@ -161,18 +160,34 @@ em {
 /* RESPONSIVE MEDIA */
 
 @media (min-width: 801px) {
+    .lineart {
+        left: 33.33%;
+        position: fixed;
+        opacity: 1;
+    }
+    
     .welcome-container {
         width: 33.33%;
     }
 }
 
 @media (min-width: 481px) and (max-width: 800px) {
+    .lineart {
+        left: 30%;
+        opacity: .5;
+    }
+    
     .welcome-container {
         width: 75%;
     }
 }
 
 @media (max-width: 480px) {
+    .lineart {
+        left: -15%;
+        opacity: .25;
+    }
+    
     .welcome-container {
         width: 100%;
     }

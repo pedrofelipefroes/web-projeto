@@ -6,6 +6,14 @@ app.controller('signinCtrl', ['$http', '$scope', 'userService', function($http, 
 //    userService.addUser($scope.newuser.username, $scope.newuser.password);
 
     $(document).ready(function () {
+        $('#amumu').lazylinepainter({
+            "svgData": amumu,
+            "strokeWidth": 1.5,
+            "strokeColor": "#00D8CB"
+        }).lazylinepainter('paint');
+    });
+    
+    $(document).ready(function () {
         $('#annie').lazylinepainter({
             "svgData": annie,
             "strokeWidth": 1.5,
