@@ -3,6 +3,8 @@
 /*
  * BODY & DISPLAY CONTAINERS
  * BUTTONS & LINKS
+ * FORMS
+ * IMAGE STYLES
  * TEXT STYLES
  */
 
@@ -127,6 +129,13 @@ a {
 
 /* IMAGE STYLES */
 
+.lineart {
+    position: absolute;
+    left: 30%;
+    top: -30%;
+    z-index: -1;
+}
+
 .logo {
     width: 75%;
 }
@@ -134,13 +143,6 @@ a {
 .logo-game {
     margin-top: 2%;
     width: 25%
-}
-
-#janna {
-    position: absolute;
-    left: 30%;
-    top: -30%;
-    z-index: -1;
 }
 
 /* TEXT STYLES */

@@ -7,8 +7,8 @@ app.controller('loginCtrl', ['$scope', 'userService', function($scope, userServi
     userService.addUser($scope.newuser.username, $scope.newuser.password);
     
     $(document).ready(function () {
-        $('#janna').lazylinepainter({
-            "svgData": janna,
+        $('#annie').lazylinepainter({
+            "svgData": annie,
             "strokeWidth": 1.5,
             "strokeColor": "#F384CA"
         }).lazylinepainter('paint');
