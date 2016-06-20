@@ -10,7 +10,7 @@
     </header>
 
     <!-- Login form -->
-    <form name="loginForm" class="user-form" method="get" action="/users/">
+    <form name="loginForm" class="user-form" method="post" action="/users/login/">
         <input type="email" name="email" placeholder="email" required
                ng-model="user.email">
         <input type="password" name="password" placeholder="password" required
