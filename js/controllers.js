@@ -1,6 +1,6 @@
 app.controller('signinCtrl', ['$http', '$scope', 'userService', function($http, $scope, userService) {
     $scope.user = {};
-    
+
     $scope.userSignup = function (user) {
         $http.post('/users/', {
             username: user.username,
@@ -14,9 +14,9 @@ app.controller('signinCtrl', ['$http', '$scope', 'userService', function($http, 
             console.log('no yey!');
         });
     };
-    
+
 //    userService.addUser($scope.newuser.username, $scope.newuser.password);
-    
+
     $(document).ready(function () {
         $('#annie').lazylinepainter({
             "svgData": annie,
@@ -24,7 +24,7 @@ app.controller('signinCtrl', ['$http', '$scope', 'userService', function($http, 
             "strokeColor": "#F384CA"
         }).lazylinepainter('paint');
     });
-    
+
     $(document).ready(function () {
         $('#janna').lazylinepainter({
             "svgData": janna,
@@ -46,12 +46,12 @@ app.controller('signinCtrl', ['$http', '$scope', 'userService', function($http, 
 //
 //app.controller('homeCtrl', ['$scope', 'userService', function($scope, userService) {
 //    $scope.user = userService.getUser;
-//    
+//
 //    var imagem = document.getElementById('slide');
 //    var intervaloSlide = setInterval(slideShow, 3000);
 //    var servidorDasImagens = 'img/slideshow/';
 //    var todasAsImagens = ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg', 'img6.jpg'];
-//    
+//
 //    function slideShow() {
 //        for (var i = 0; i < todasAsImagens.length; i++) {
 //            if (imagem.src.indexOf(todasAsImagens[i]) != -1) {
@@ -63,7 +63,7 @@ app.controller('signinCtrl', ['$http', '$scope', 'userService', function($http, 
 //            }
 //        }
 //    }
-//    
+//
 //    $scope.news = 'Notícias';
 //    $scope.patchnews = 'Patch-fixes';
 //}]);

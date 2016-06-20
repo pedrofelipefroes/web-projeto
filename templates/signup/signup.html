@@ -12,13 +12,13 @@
     <!-- Signup form -->
     <form name="signupForm" class="user-form" method="post" action="/users/">
         <input type="text" name="username" placeholder="username" required
-               ng-minlength="3" ng-model="user.username" id="username">
+               ng-minlength="3" ng-model="username" id="username">
         <input type="email" name="email" placeholder="email" required
-               ng-minlength="3" ng-model="user.email" id="email">
+               ng-minlength="3" ng-model="email" id="email">
         <input type="email" name="emailconf" placeholder="confirm email" required
                ng-minlength="3">
         <input type="password" name="password" placeholder="password" required
-               ng-minlength="3" ng-model="user.password" id="password">
+               ng-minlength="3" ng-model="password" id="password">
         <input type="password" name="passwordconf" placeholder="confirm password" required
                ng-minlength="3">
 
@@ -31,7 +31,7 @@
             <a href="#/login" class="button button-clear"><em>Cancel</em></a>
         </div>
     </form>
-    
+
     <pre> user = {{ user | json }}</pre>
-    
+
 </div>
