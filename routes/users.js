@@ -3,7 +3,7 @@ var db = require('../db');
 
 var router = express.Router();
 
-/* POST logar pessoa. */
+// POST logar pessoa.
 router.post('/login/', function (req, res, next) {
   var email = db.escape(req.body.email);
   var password = (db.escape(req.body.password)).replace(/['"]+/g, '');
@@ -24,7 +24,7 @@ router.post('/signup/', function (req, res) {
   var username = db.escape(req.body.username);
   var email = db.escape(req.body.email);
   var password = db.escape(req.body.password);
-  // var pictureUrl = db.escape(req.body.pictureUrl)
+
   var pictureUrl = null;
 
   db.query('INSERT INTO user (nickname, email, password, pictureUrl) VALUES (' + username + ',' + email + ',' + password + ',' + pictureUrl + ')',

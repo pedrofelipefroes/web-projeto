@@ -29,32 +29,6 @@ app.controller('signinCtrl', ['$scope', function($scope) {
     }
 
     draw(0);
-  
-//  $scope.user = {};
-//  
-//  console.log('yey!');
-
-//  $('#amumu-forgot').lazylinepainter({
-//    "svgData": amumu,
-//    "strokeWidth": 1.5,
-//    "strokeColor": "#00D8CB"
-//  }).lazylinepainter('paint');
-  
-//  $('#annie-login')
-//
-//  $('#annie-login').lazylinepainter({
-//    "svgData": annie,
-//    "strokeWidth": 1.5,
-//    "strokeColor": "#FF5656"
-//  }).lazylinepainter('paint');
-
-//$(document).ready(function () {
-//  $('#janna-signup').lazylinepainter({
-//    "svgData": janna,
-//    "strokeWidth": 1.5,
-//    "strokeColor": "#89BDEF"
-//  }).lazylinepainter('paint');
-//});
 }]);
 
 app.controller('homeCtrl', ['$scope', 'userService', function($scope, userService) {

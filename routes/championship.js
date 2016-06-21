@@ -16,7 +16,7 @@ var getQueryString = function ( field, url ) {
 //GET campeonatos
 router.get('/', function (req, res, next) {
   db.query('SELECT * FROM championship ', function (err, rows) {
-    res.render('/', { users: _.last(rows,4); })
+    res.render('/', { users: _.last(rows,4) })
   }
   )
 })
@@ -26,28 +26,20 @@ router.get('/', function (req, res, next) {
   var championship = getQueryString('id');
 
   db.query('SELECT * FROM participate where idC = ' + championship, function (err, rows) {
-    res.render('/', { users: rows })
+    res.render('/', { users: rows });
   }
   )
-})
+});
 
 // POST registra um novo campeonato
 router.post('/register/', function (req, res) {
+  var name = db.escape(req.body.champname)
   var participants = db.escape(req.body.participants)
-  var users = db.escape(req.body.users)
 
-  db.query('INSERT INTO championship (participants) VALUES (' + participants + ')', function (err, result) {
+  db.query('INSERT INTO championship (participants, name) VALUES (' + participants + ',' + name + ')', function (err, result) {
     if (err) { res.send(404, 'It wasnt possible to add a championship=('); }
-  })
-
-  db.query('SELECT MAX(id) as id FROM championship', function (err, result) { //Pega o id que acabou de ser cadastrado
-    if (err) { res.send(404, 'It wasnt possible to get the max(id) from championship'); }
-    for (var i = 0; i < users.length; i++) {
-      db.query('INSERT INTO participate (idU, idC, nivel) VALUES (' + users[i].id + ',' + result.id + ',' + '1)', function (err, result) {
-        if (err) { res.send(404, 'It wasnt possible to insert championship and user into participate table'); }
-      })
+    res.render('../../#/home');
     })
-  }
-})
+});
 
 module.exports = router;

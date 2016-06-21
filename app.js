@@ -11,18 +11,16 @@ var db = require('./db');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var championship = require('./routes/championship');
 
 var app = express();
 
-// view engine setup
 app.set('views', path.join(__dirname));
 app.set('view engine', 'html');
 app.use(express.static(path.join(__dirname)));
 
-// override with POST having ?_method=DELETE
 app.use(methodOverride('_method', { methods: ['GET', 'POST'] }));
-// uncomment after placing your favicon in /public
-//app.use(favicon(__dirname + '/public/favicon.ico'));
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -30,7 +28,7 @@ app.use(flash());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/home', routes);
 app.use('/users', users);
+app.use('/championship', championship);
 
 module.exports = app;

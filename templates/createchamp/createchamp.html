@@ -22,17 +22,17 @@
 
     <!-- Create championship form -->
     <form name="createchampForm" class="container container-createchamp user-form"
-          method="post" action="/users/signup/">
+          method="post" action="/championship/register/">
         <input type="text" name="champname" placeholder="name of your championship" required>
         <label for="selectParticipants"> Select the number of participants: </label>
-        <select name="selectParticipants" class="button button-outline" id="selectParticipants">
+        <select name="participants" class="button button-outline" id="selectParticipants">
           <option value="2">2</option>
-          <option value="2">4</option>
-          <option value="2">8</option>
-          <option value="2">16</option>
-          <option value="2">32</option>
+          <option value="4">4</option>
+          <option value="8">8</option>
+          <option value="16">16</option>
+          <option value="32">32</option>
         </select>
-        
+
         <div class="flex flex-column flex-align-center margin-button">
             <button type="submit" href="#/home" class="button button-outline"
                     ng-click="userSignup()" ng-disabled="signupForm.$invalid">
