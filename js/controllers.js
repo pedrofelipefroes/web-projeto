@@ -1,7 +1,15 @@
-app.controller('signinCtrl', ['$scope', 'userService', function($scope, userService) {
+app.controller('signinCtrl', ['$http', '$scope', '$state', 'userService', function($http, $scope, $state, userService) {
     $scope.user = {};
-
-    $scope.userSignup = function (user) {};
+    
+    $scope.userLogin = function () {
+        $http.post('url/do/post', {
+            email: $scope.user.email,
+            password: $scope.user.password
+        }).success(function (data) {
+            userService.setUser(data.username, data.email);
+            $state.go('/home');
+        });
+    }
 
 //    userService.addUser($scope.newuser.username, $scope.newuser.password);
 

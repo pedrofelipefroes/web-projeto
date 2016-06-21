@@ -51,7 +51,7 @@ body {
     transition: all 1.5s ease-in-out;
 }
 
-.welcome-container {
+.container {
     color: #FFFFFF;
     font-family: 'Source Code Pro', monospace;
     font-size: .8em;
@@ -222,6 +222,14 @@ em {
         width: 20%;
     }
     
+    .container-createchamp {
+        width: 50%;
+    }
+    
+    .container-welcome {
+        width: 33.33%;
+    }
+    
     .lineart-home {
         left: 50%;
         top: -15%;
@@ -237,10 +245,6 @@ em {
     .logo-header {
         width: 20%;
     }
-    
-    .welcome-container {
-        width: 33.33%;
-    }
 }
 
 @media (min-width: 801px) and (max-width: 1040px) {
@@ -249,6 +253,14 @@ em {
         padding-bottom: .5%;
         width: 20%;
         min-height: 40px;
+    }
+    
+    .container-createchamp {
+        width: 50%;
+    }
+    
+    .container-welcome {
+        width: 33.33%;
     }
     
     .lineart-home {
@@ -266,10 +278,6 @@ em {
     .logo-header {
         width: 20%;
     }
-    
-    .welcome-container {
-        width: 33.33%;
-    }
 }
 
 @media (min-width: 481px) and (max-width: 800px) {
@@ -278,6 +286,14 @@ em {
         padding-bottom: .5%;
         width: 25%;
         min-height: 40px;
+    }
+    
+    .container-createchamp {
+        width: 75%;
+    }
+    
+    .container-welcome {
+        width: 75%;
     }
     
     .lineart-home {
@@ -296,10 +312,6 @@ em {
         position: absolute;
         top: 15%;
     }
-    
-    .welcome-container {
-        width: 75%;
-    }
 }
 
 @media (max-width: 480px) {
@@ -309,6 +321,14 @@ em {
         padding-bottom: .5%;
         width: 25%;
         min-height: 40px;
+    }
+    
+    .container-createchamp {
+        width: 100%;
+    }
+    
+    .container-welcome {
+        width: 100%;
     }
     
     .lineart-home {
@@ -326,9 +346,5 @@ em {
         opacity: .1;
         position: absolute;
         top: 15%;
-    }
-    
-    .welcome-container {
-        width: 100%;
     }
 }

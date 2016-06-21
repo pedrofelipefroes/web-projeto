@@ -1,22 +1,15 @@
 app.service('userService', function() {
-    var user = [{
+    var user = {
         username: '',
-        password: ''
-    }];
-    
-    var addUser = function(n, p) {
-        user.push({
-            username: n,
-            password: p
-        })
+        email: ''
     }
     
-    var getUser = function() {
-        return user;
+    var setUser = function(username, email) {
+        user.username = username;
+        user.email = email;
     }
     
     return {
-        addUser: addUser,
-        getUser: getUser
+        setUser: setUser
     };
 });

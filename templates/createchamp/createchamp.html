@@ -1,0 +1,46 @@
+<div id="soraka" class="lineart-home invisible visible"></div>
+<div id="amumu" class="lineart-home invisible visible"></div>
+<div id="fiora" class="lineart-home invisible visible"></div>
+<div id="ahri" class="lineart-home invisible visible"></div>
+<div id="annie" class="lineart-home invisible visible"></div>
+<div id="janna" class="lineart-home invisible visible"></div>
+
+<div class="flex flex-column">
+    
+    <!-- Header bar   -->
+    <header class="flex flex-justify-space header-bar">
+        <img src="../../img/logo/logo_playstadium.svg" class="logo-header" alt="Play Stadium">
+        <a href="#/createchampionship" 
+           class="button button-clear button-header text-center">Create championship</a>
+        <a href="#/viewchampionship" 
+           class="button button-clear button-header text-center">View my championships</a>
+        <a href="#/edituser"
+           class="button button-clear button-header text-center">Edit my profile</a>
+        <a href="#/logout"
+           class="button button-clear button-header text-center">Log me out</a>
+    </header>
+    
+    <!-- Create championship form -->
+    <form name="createchampForm" class="container container-createchamp user-form"
+          method="post" action="/users/signup/">
+        <input type="text" name="champname" placeholder="name of your championship" required>
+        <input type="range" min="2" max="16" step="2" name="email" placeholder="email" required
+               ng-minlength="3" id="email">
+        <input type="email" name="emailconf" placeholder="confirm email" required
+               ng-minlength="3">
+        <input type="password" name="password" placeholder="password" required
+               ng-minlength="3" id="password">
+        <input type="password" name="passwordconf" placeholder="confirm password" required
+               ng-minlength="3">
+
+        <div class="flex flex-column flex-align-center">
+            <button type="submit" href="#/home" class="button button-outline"
+                    ng-click="userSignup()" ng-disabled="signupForm.$invalid">
+                Sign up
+            </button>
+
+            <a href="#/login" class="button button-clear"><em>Cancel</em></a>
+        </div>
+    </form>
+    
+</div>

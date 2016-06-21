@@ -19,6 +19,10 @@ app.config(function ($routeProvider) {
         templateUrl: '/templates/home/home.html',
         controller: 'homeCtrl'
     })
+    .when('/createchamp', {
+        templateUrl: '/templates/createchamp/createchamp.html',
+        controller: 'homeCtrl'
+    })
     .otherwise({
         redirectTo: '/home'
     })
