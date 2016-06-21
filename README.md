@@ -32,5 +32,6 @@ Passos para execução do projeto em um servidor local:
 1. Digitar o comando `npm install`;
 1. Digitar o comando `mysql -u root -p < script-to-create-db.sql`;
 1. Digitar o comando `npm start`;
+1. Acessar no navegador o link `http://localhost:3000/`.
 
 Obs.: O usuário e senha do MySql foram `root` e `123456`
