@@ -8,12 +8,11 @@ router.post('/login/', function (req, res, next) {
   var email = db.escape(req.body.email);
   var password = (db.escape(req.body.password)).replace(/['"]+/g, '');
   var sql = 'SELECT * FROM user WHERE email = ' + email;
-
   db.query(sql, function (err, rows) {
     if (err) { res.send(404, 'Couldnt get user')
     } else {
       if (rows.length == 1) {
-        if (rows[0].password == password) { res.redirect('/');
+        if (rows[0].password == password) { res.redirect('../../#/home');
       } else { res.redirect('/'); } // Email registrado, senha errada
     } else { res.redirect('/'); } // Email inexistente
     }

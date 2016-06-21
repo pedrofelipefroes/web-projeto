@@ -24,7 +24,7 @@ app.config(function ($routeProvider) {
         controller: 'homeCtrl'
     })
     .otherwise({
-        redirectTo: '/createchamp'
+        redirectTo: '/login'
     })
 })
 

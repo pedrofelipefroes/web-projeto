@@ -1,6 +1,6 @@
 app.controller('signinCtrl', ['$http', '$scope', '$state', 'userService', function($http, $scope, $state, userService) {
     $scope.user = {};
-    
+
     $scope.userLogin = function () {
         $http.post('url/do/post', {
             email: $scope.user.email,
@@ -20,7 +20,7 @@ app.controller('signinCtrl', ['$http', '$scope', '$state', 'userService', functi
             "strokeColor": "#00D8CB"
         }).lazylinepainter('paint');
     });
-    
+
     $(document).ready(function () {
         $('#annie').lazylinepainter({
             "svgData": annie,
@@ -40,7 +40,7 @@ app.controller('signinCtrl', ['$http', '$scope', '$state', 'userService', functi
 
 
 app.controller('homeCtrl', ['$scope', 'userService', function($scope, userService) {
-    
+
     $scope.character = [
         { name: soraka, id: '#soraka', color: "#F384CA", duration: 25100 },
         { name: amumu, id: '#amumu', color: "#00D8CB", duration: 17400 },
@@ -49,11 +49,11 @@ app.controller('homeCtrl', ['$scope', 'userService', function($scope, userServic
         { name: annie, id: '#annie', color: "#FF5656", duration: 14700 },
         { name: janna, id: '#janna', color: "#89BDEF", duration: 23600 },
     ];
-    
+
     var draw = function (it) {
         $($scope.character[it].id).removeClass("invisible");
         $($scope.character[it].id).add("invisible");
-        
+
         $($scope.character[it].id).lazylinepainter({
             "svgData": $scope.character[it].name,
             "strokeWidth": 1.5,
@@ -61,14 +61,14 @@ app.controller('homeCtrl', ['$scope', 'userService', function($scope, userServic
             "onComplete": function () {
                 $($scope.character[it].id).addClass("invisible");
                 $($scope.character[it].id).removeClass("visible");
-                
+
                 if (it == 5) it = it - 5;
                 else it = it + 1;
-                
+
                 draw(it);
             }
         }).lazylinepainter('paint');
     }
-    
+
     draw(0);
 }]);
