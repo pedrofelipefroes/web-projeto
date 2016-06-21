@@ -17,9 +17,20 @@ por Cassiano de Brito Andrade e Pedro Felipe Froes
 </strong>
 </center>
 
-O PlayStadium é um e-Sports Championship Manager para jogos de League of Legends construído através de AngularJs e ExpressJs.
+O PlayStadium é um e-Sports Championship Manager para jogos de League of Legends construído através de AngularJs,  ExpressJs e MySQL.
 
-- AngularJs
-- ExpressJs
-- LazyLinePainter
-- Responsivo
+Funcionalidades opcionais:
+- Uso de _favicon_;
+- Páginas responsivas;
+- Uso de animações e transições CSS nos formulários;
+- _Single Page Application_ através do **AngularJs**;
+- Desenho de vetores através do **LazyLinePainter**.
+
+Passos para execução do projeto em um servidor local:
+
+1 - Abrir prompt de comando e se direcionar para a pasta do projeto
+1 - Digitar o comando `npm install`
+1 - Digitar o comando `mysql -u root -p < script-to-create-db.sql`
+1 - Digitar o comando `npm start`
+
+Obs.: O usuário e senha do MySql foram `root` e `123456`
