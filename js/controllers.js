@@ -54,8 +54,10 @@ app.controller('homeCtrl', ['$scope', 'userService', function($scope, userServic
                 $($scope.character[it].id).addClass("invisible");
                 $($scope.character[it].id).removeClass("visible");
                 
-                if (it < 6) draw(it+1);
-                else draw(0);
+                if (it == 5) it = it - 5;
+                else it = it + 1;
+                
+                draw(it);
             }
         }).lazylinepainter('paint');
     }

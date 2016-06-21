@@ -20,7 +20,7 @@ app.config(function ($routeProvider) {
         controller: 'homeCtrl'
     })
     .otherwise({
-        redirectTo: '/login'
+        redirectTo: '/home'
     })
 })
 
