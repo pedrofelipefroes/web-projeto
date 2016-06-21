@@ -1,4 +1,4 @@
-app.controller('signinCtrl', ['$http', '$scope', 'userService', function($http, $scope, userService) {
+app.controller('signinCtrl', ['$scope', 'userService', function($scope, userService) {
     $scope.user = {};
 
     $scope.userSignup = function (user) {};
@@ -31,43 +31,34 @@ app.controller('signinCtrl', ['$http', '$scope', 'userService', function($http, 
 }]);
 
 
-//
-//app.controller('forgotpasswordCtrl', ['$scope', function($scope) {
-//    $scope.message = 'Hello from the other side';
-//}]);
-//
-//app.controller('signupCtrl', ['$scope', function($scope) {
-//    $scope.message = 'Hello from the signup side';
-//}]);
-//
-//app.controller('homeCtrl', ['$scope', 'userService', function($scope, userService) {
-//    $scope.user = userService.getUser;
-//
-//    var imagem = document.getElementById('slide');
-//    var intervaloSlide = setInterval(slideShow, 3000);
-//    var servidorDasImagens = 'img/slideshow/';
-//    var todasAsImagens = ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg', 'img6.jpg'];
-//
-//    function slideShow() {
-//        for (var i = 0; i < todasAsImagens.length; i++) {
-//            if (imagem.src.indexOf(todasAsImagens[i]) != -1) {
-//                if (i != todasAsImagens.length-1)
-//                    imagem.src = servidorDasImagens+todasAsImagens[i+1];
-//                else
-//                    imagem.src = servidorDasImagens+todasAsImagens[0];
-//                break;
-//            }
-//        }
-//    }
-//
-//    $scope.news = 'Notícias';
-//    $scope.patchnews = 'Patch-fixes';
-//}]);
-//
-//app.controller('mychampionshipsCtrl', ['$scope', function($scope) {
-//    $scope.message = 'This is MYYYY championship';
-//}]);
-//
-//app.controller('createchampionshipsCtrl', ['$scope', function($scope) {
-//    $scope.message = 'Hello from the champion side';
-//}]);
+app.controller('homeCtrl', ['$scope', 'userService', function($scope, userService) {
+    
+    $scope.character = [
+        { name: soraka, id: '#soraka', color: "#F384CA", duration: 25100 },
+        { name: amumu, id: '#amumu', color: "#00D8CB", duration: 17400 },
+        { name: fiora, id: '#fiora', color: "#FF5656", duration: 15600 },
+        { name: ahri, id: '#ahri', color: "#89BDEF", duration: 29200 },
+        { name: annie, id: '#annie', color: "#FF5656", duration: 14700 },
+        { name: janna, id: '#janna', color: "#89BDEF", duration: 23600 },
+    ];
+    
+    var draw = function (it) {
+        $($scope.character[it].id).removeClass("invisible");
+        $($scope.character[it].id).add("invisible");
+        
+        $($scope.character[it].id).lazylinepainter({
+            "svgData": $scope.character[it].name,
+            "strokeWidth": 1.5,
+            "strokeColor": $scope.character[it].color,
+            "onComplete": function () {
+                $($scope.character[it].id).addClass("invisible");
+                $($scope.character[it].id).removeClass("visible");
+                
+                if (it < 6) draw(it+1);
+                else draw(0);
+            }
+        }).lazylinepainter('paint');
+    }
+    
+    draw(0);
+}]);
