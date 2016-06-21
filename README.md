@@ -28,9 +28,9 @@ Funcionalidades opcionais:
 
 Passos para execução do projeto em um servidor local:
 
-1 - Abrir prompt de comando e se direcionar para a pasta do projeto
-1 - Digitar o comando `npm install`
-1 - Digitar o comando `mysql -u root -p < script-to-create-db.sql`
-1 - Digitar o comando `npm start`
+1. Abrir prompt de comando e se direcionar para a pasta do projeto;
+1. Digitar o comando `npm install`;
+1. Digitar o comando `mysql -u root -p < script-to-create-db.sql`;
+1. Digitar o comando `npm start`;
 
 Obs.: O usuário e senha do MySql foram `root` e `123456`
