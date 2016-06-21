@@ -33,6 +33,7 @@ DROP TABLE IF EXISTS `esports`.`championship` ;
 CREATE TABLE IF NOT EXISTS `esports`.`championship` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `participants` VARCHAR(2) NOT NULL,
+  `name` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`id`)
 )
 ENGINE = InnoDB;
@@ -83,7 +84,7 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `esports`;
-INSERT INTO `esports`.`championship` (`id`, `participants`) VALUES (1, '4');
+INSERT INTO `esports`.`championship` (`id`, `participants`, `name`) VALUES (1, '4', 'Copa das galinhas');
 
 COMMIT;
 

@@ -30,6 +30,7 @@ app.use(flash());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/home', routes);
 app.use('/users', users);
 
 module.exports = app;
